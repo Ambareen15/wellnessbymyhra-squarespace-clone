@@ -74,3 +74,16 @@ function moveToPrevSlide() {
 
     updateSlidePosition();
 };
+
+
+
+//login form
+
+const loginPage = document.getElementById('login-page');
+const loginButton = document.getElementById('desktop-login');
+const overlay = document.getElementById('overlay');
+
+loginButton.addEventListener('click', () => {
+    loginPage.classList.toggle('login-open');
+    overlay.classList.toggle('login-open');
+})
