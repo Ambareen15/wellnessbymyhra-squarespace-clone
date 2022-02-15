@@ -350,11 +350,9 @@ body {
     background-color: #c2c8cc;
     border: none;
     font-family: var(--font-secondary-);
-}
-
-.option button a{
     color: var(--clr-black-);
 }
+
 
 /* nutrition seciton */
 #nutrition-guidance,
