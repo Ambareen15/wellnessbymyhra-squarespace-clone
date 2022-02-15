@@ -443,6 +443,7 @@ body {
 
 .coaching-col-2 button {
     background-color: #c2c8cc;
+    color: var(--clr-black-);
     border: none;
     font-family: var(--font-secondary-);
     padding: 1.25rem;
