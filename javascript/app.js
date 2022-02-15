@@ -34,46 +34,46 @@ faders.forEach(fader => {
 
 // home page carousel/slider
 
-let slidePosition = 0;
-const slides = document.getElementsByClassName('carousel__item');
-const totalSlides = 3;
+// let slidePosition = 0;
+// const slides = document.getElementsByClassName('carousel__item');
+// const totalSlides = 3;
 
-document.getElementById('carousel__btn-next').addEventListener('click', () => {
-    moveToNextSlide();
-});
+// document.getElementById('carousel__btn-next').addEventListener('click', () => {
+//     moveToNextSlide();
+// });
 
-document.getElementById('carousel__btn-prev').addEventListener('click', () => {
-    moveToPrevSlide();
-});
+// document.getElementById('carousel__btn-prev').addEventListener('click', () => {
+//     moveToPrevSlide();
+// });
 
-function updateSlidePosition() {
-    for(let slide of slides) {
-        slide.classList.remove('carousel__item-visible');
-        slide.classList.add('carousel__item-hidden');
-    }
+// function updateSlidePosition() {
+//     for(let slide of slides) {
+//         slide.classList.remove('carousel__item-visible');
+//         slide.classList.add('carousel__item-hidden');
+//     }
 
-    slides[slidePosition].classList.add('carousel__item-visible');
-}
+//     slides[slidePosition].classList.add('carousel__item-visible');
+// }
 
-function moveToNextSlide() {
-    if (slidePosition === totalSlides - 1) {
-        slidePosition = 0; 
-    } else {
-        slidePosition++;
-    }
+// function moveToNextSlide() {
+//     if (slidePosition === totalSlides - 1) {
+//         slidePosition = 0; 
+//     } else {
+//         slidePosition++;
+//     }
 
-    updateSlidePosition();
-};
+//     updateSlidePosition();
+// };
 
-function moveToPrevSlide() {
-    if (slidePosition === 0) {
-        slidePosition = totalSlides - 1; 
-    } else {
-        slidePosition--;
-    }
+// function moveToPrevSlide() {
+//     if (slidePosition === 0) {
+//         slidePosition = totalSlides - 1; 
+//     } else {
+//         slidePosition--;
+//     }
 
-    updateSlidePosition();
-};
+//     updateSlidePosition();
+// };
 
 
 
