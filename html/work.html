@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with me</title>
+    <link rel="stylesheet" href="/css/work.css" type="text/css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="https://kit.fontawesome.com/6b4e73a8c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+        <!-- desktop navbar -->
+        <nav id="desktop-nav">
+            <!-- social icons for desktop/tablet/ipad nav -->
+            <ul id="desktop-nav-socials" class="socials">
+                <li class="fade-in"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="fade-in"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="fade-in"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <!-- desktop nav links -->
+            <div id="desktop-logo-links">
+                <i id="desktop-logo" class="logo fade-in"><a href="./index.html">WELLNESS BY MYHRA</a></i>
+                <ul id="desktop-nav-links" class="nav-links">
+                    <li class="fade-in"><a href="./about.html">About</a></li>
+                    <li class="fade-in"><a href="./services.html">Services</a></li>
+                    <li class="fade-in"><a href="./coaching.html">Coaching</a></li>
+                    <li id="dropdown" class="fade-in"><a href="#">Recipes</a>
+                    <ul id="dropdown-content">
+                        <li><a href="#">Seasonal recipes</a></li>
+                        <li><a href="#">Meal plans</a></li>
+                    </ul></li>
+                    <li class="fade-in"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- desktop login link and nav button -->
+            <div class="desktop-nav-buttons">
+                <div id="login-page">
+                    <a href="#" id="desktop-login" class="fade-in">Login</a>
+                    <div class="login-content">
+                        <h3 id="login-title">Welcome to Wellness by Myhra</h3>
+                        <form action="#" id="login-form">
+                            <input type="email" id="login-email" placeholder="Email" required>
+                            <input type="password" id="login-password" placeholder="Password" required>
+                            <button id="login-btn">Sign In</button>
+                            <div id="login-account-info">
+                                <a href="#" class="account-info">Forgot Password?</a>
+                                <a href="#" class="account-info">Create account</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button id="desktop-nav-btn" class="nav-btn btn fade-in"><a href="./work.html">Work with me</a></button>
+
+                <div id="overlay"></div>
+            </div>
+        </nav>
+
+        <!-- mobile navbar -->
+        <nav id="mobile-nav">
+            <div class="bg-cover"></div>
+            <div class="logoburger">
+                <!-- title/logo -->
+                <i id="mobile-logo" class="logo"><a href="./index.html">WELLNESS BY MYHRA</a></i>
+                <!-- hamburger -->
+                <button id="hamburger" class="toggle">
+                    <span class="line"></span>
+                </button>
+            </div>
+            <!-- nav links for mobile hamburger menu -->
+            <ul id="mobile-nav-links" class="nav-links mobile-hidden">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./coaching.html">Coaching</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <!-- mobile login link -->
+            <a href="#" id="mobile-login" class="mobile-hidden">Login</a>
+            <!-- mobile social media icons for hamburger menu -->
+            <ul id="mobile-nav-socials" class="socials mobile-hidden" >
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <!-- button in hamburger menu -->
+            <button id="mobile-nav-btn" class="nav-btn btn mobile-hidden"><a href="./work.html">Work with me</a></button>
+        </nav>
+        <h1 id="work-header-title">BEGIN YOUR WELLNESS JOURNEY.</h1>
+    </header>
+    
+    <main>
+        <div id="work-content">
+            <div id="coaching" class="content">
+                <h2 class="work-content-title fade-in">1:1 COACHING</h2>
+                <p class="work-content-para">The ideal choice if you want a personalized plan that is tailored to your goals and lifestyle.</p>
+                <button class="work-content-btn fade-in">Learn more</button>
+                <h4 class="work-content-sub-title fade-in">FREE CONSULTATION</h4>
+            </div>
+            <div id="online-courses" class="content">
+                <h2 class="work-content-title fade-in">ONLINE COURSES</h2>
+                <p class="work-content-para">Explore wellness principles on your own schedule through a variety of online courses.</p>
+                <button class="work-content-btn fade-in">Learn more</button>
+                <h4 class="work-content-sub-title fade-in">$750/YR · UNLIMITED ACCESS</h4>
+            </div>
+            <div id="live-events" class="content">
+                <h2 class="work-content-title fade-in">LIVE EVENTS</h2>
+                <p class="work-content-para">Begin your wellness journey with full access to our beginner-friendly live webinars and events. </p>
+                <button class="work-content-btn fade-in">Learn more</button>
+                <h4 class="work-content-sub-title fade-in">$50/MO  · UNLIMITED EVENTS</h4>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <h3 id="ftr-title" class="fade-in">NEVER MISS A RECIPE.</h3>
+        <form action="#" id="form">
+            <input type="email" id="email" placeholder="Email Address" class="fade-in">
+            <button id="form-btn" class="fade-in">Sign Up</button>
+        </form>
+    </footer>
+
+    <script src="/javascript/work.js"></script>
+</body>
+</html>

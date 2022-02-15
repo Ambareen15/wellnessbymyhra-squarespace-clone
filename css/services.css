@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7d9cb;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+}
+
+:root {
+    --clr-white- : #fff;
+    --clr-dim-white- : #c2c8cc;
+    --clr-black- : #000;
+    --font-main- : 'cinzel';
+    --font-secondary- : 'Lora';
+}
+
+/* hamburger icon */
+#hamburger {
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+
+.line {
+    display: block;
+    position: relative;
+}
+
+.line,
+.line::before {
+    width: 2.4em;
+    height: 1.325px;
+    background-color: var(--clr-white-);
+    transition: transform 200ms ease-in-out;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+
+.nav-open .line {
+    transform: rotate(45deg);
+}
+
+.nav-open .line::before {
+    transform: rotate(90deg) translate(9px);
+}
+
+/* wellness by myhra logo */
+.logo {
+    font-style: normal;
+    font-family: var(--font-main-);
+    font-size: clamp(1.15rem,2.5vw,2.5rem);
+}
+
+/* logo and hamburger alignment */
+.logoburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-white-);
+    width: 90vw;
+    margin: 20px auto;
+    z-index: 21;
+}
+
+/* open hamburger */
+.nav-open {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 100vw;
+    background-color: var(--clr-dim-white-);
+    position: absolute;
+}
+
+.bg-cover {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    z-index: 20;
+}
+
+.nav-open .bg-cover {
+    transform: scale(150);
+    background-color: var(--clr-dim-white-);
+}
+
+.nav-open .mobile-hidden{
+    display: block;
+}
+
+.nav-open #mobile-logo a {
+    color: var(--clr-black-);
+}
+
+.nav-open .line,
+.nav-open .line::before {
+    background-color: var(--clr-black-);
+}
+
+.nav-open .nav-links {
+    z-index: 21;
+    margin-top: 20px;
+}
+
+.nav-open .nav-links li{
+    list-style: none;
+    padding: 5.5px;
+}
+
+.nav-open .nav-links li a {
+    color: var(--clr-black-);
+    text-decoration: none;
+    font-size: 2.25rem;
+    padding-left: 25px;
+    font-family: var(--font-secondary-);
+}
+
+.nav-open #mobile-login {
+    font-size: 2rem;
+    color: var(--clr-black-);
+    text-decoration: none;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-family: var(--font-secondary-);
+    z-index: 21;
+}
+
+.nav-open #mobile-nav-socials {
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+    margin-top: 75px;
+    margin-left: 7px;
+    z-index: 21;
+}
+
+.nav-open #mobile-nav-socials li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.nav-open #mobile-nav-socials li a {
+    color: var(--clr-black-);
+}
+
+.nav-open #mobile-nav-btn {
+    width: 200px;
+    padding: 1rem 2rem;
+    font-family: var(--font-secondary-);
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 50px 0 30px 25px;
+    z-index: 21;
+}
+
+.nav-open #mobile-nav-btn a {
+    color: var(--clr-dim-white-);
+    text-decoration: none;
+}
+
+/* desktop navbar */
+#desktop-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#desktop-logo-links {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    margin: 0 auto;
+}
+
+#desktop-nav-links {
+    display: flex;
+    width: 45vw;
+    justify-content: space-evenly;
+    padding: 20px;
+    position: relative;
+    right: -35px;
+}
+
+#desktop-nav-links li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#second-child {
+    border-bottom: 1.5px solid var(--clr-white-);
+}
+
+#desktop-nav-links li a {
+    text-decoration: none;
+    color: var(--clr-white-);
+}
+
+#dropdown-content {
+    display: none;
+}
+
+#dropdown:hover > #dropdown-content {
+    display: block;
+    position: absolute;
+    right: 30px;
+    padding: 14px 30px 14px 14px;
+    width: 200px;
+    background-color: var(--clr-black-);
+} 
+
+#desktop-logo {
+    text-align: center;
+    width: 48vw;
+    position: relative;
+    right: -20px;
+}
+
+#desktop-logo a {
+    text-decoration: none;
+    color: var(--clr-white-);
+}
+
+#desktop-nav-socials {
+    display: flex;
+    width: 9%;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+#desktop-nav-socials li {
+    list-style: none;
+}
+
+#desktop-nav-socials li a {
+    color: var(--clr-white-);
+}
+
+#desktop-nav-btn {
+    padding: .9rem 1.5rem;
+    font-family: var(--font-secondary-);
+    background-color: var(--clr-dim-white-);
+    border: none;
+    margin-top: 20px;
+    font-size: .95rem;
+    cursor: pointer;
+}
+
+#desktop-nav-btn a {
+    color: var(--clr-black-);
+    text-decoration: none;
+}
+
+#desktop-login {
+    color: var(--clr-white-);
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 1.1rem;
+    padding-top: 20px;
+}
+
+#service-title {
+    color: var(--clr-white-);
+    font-family: var(--font-main-);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 60px;
+    font-size: clamp(1.7rem, 3vw, 3rem);
+}
+
+header {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5e9e44e143969e061c2ed8fa/1597176330271-GHPCU2PXRS4OYQMKI75S/ke17ZwdGBToddI8pDm48kC7Lwopez-Eh6hUx0aP4Wdl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UXej4mYlIxsjYjH1rc_w8KHR-1LNvV5U8YFdWIURJqbkMp_FMcU1gUL10KSCMP2eAw/mushroom.jpg);
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -30px;
+    padding: 30px 0 2.5rem 0;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: multiply;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 30px auto;
+    border-bottom: 1.5px solid var(--clr-black-);
+}
+
+/* events section */
+#events {
+    align-items: flex-start;
+}
+
+#event-col-1 img {
+    width: 20vw;
+    margin-top: 30px;
+}
+
+.section-title {
+    font-family: var(--font-main-);
+    font-weight: 500;
+    width: 100px;
+    font-size: clamp(1.25rem, 2.25vw, 2.25rem);
+}
+
+.section-para {
+    font-family: var(--font-secondary-);
+    font-size: .9rem;
+    margin-top: 30px;
+    line-height: 1.8;
+    width: 60%;
+}
+
+.col-2 {
+    width: 60%;
+    margin-top: 70px;
+}
+
+#event-col-2 > h3 {
+    font-family: var(--font-main-);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    width: 100%;
+}
+
+#event-col-2 > p {
+    font-family: var(--font-main-);
+    font-weight: 500;
+    padding: 40px 0;
+    font-size: clmap(1rem, 1.1rem, 1.2rem);
+    border-bottom: 1.5px solid var(--clr-black-);
+    margin-bottom: 40px;
+}
+
+.price-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.price {
+    width: 35%;
+    font-family: var(--font-main-);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+#course-price {
+    position: relative;
+    left: 40px;
+}
+
+.sign-up-btn {
+    color: white;
+    background-color: var(--clr-black-);
+    font-family: var(--font-secondary-);
+    font-size: .9rem;
+    padding: 1.2rem 1.5rem;
+    width: 120px;
+    border: none;
+    margin-right: 40px;
+}
+
+.sign-up-btn:hover {
+    background-color: rgb(41, 40, 40);
+}
+
+/* courses section */
+#detox-oils {
+    width: 42vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.5px solid var(--clr-black-);
+    margin-bottom: 40px;
+}
+
+
+.text-img-flex h3 {
+    font-family: var(--font-main-);
+    font-weight: 500;
+    font-size: clamp(1.3rem, 2.25vw, 2.25rem);
+    margin-top: 20px;
+    width: 75%;
+}
+
+.text-img-flex > img {
+    width: 20vw;
+}
+
+.text-img-flex p {
+    font-family: var(--font-secondary-);
+    font-size: .9rem;
+    margin-top: 30px;
+    line-height: 1.8;
+    width: 80%;
+}
+
+.text-img-flex ul {
+    margin: 40px 0;
+}
+
+.text-img-flex ul li {
+    font-family: var(--font-secondary-);
+    font-size: .9rem;
+    list-style: none;
+    line-height: 1.8;
+}
+
+.text-img-flex ul span {
+    font-weight: 700;
+}
+
+#course-col-1 p {
+    width: 65%;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    padding-top: 30px;
+}
+
+/* coaching section */
+#coaching {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#coaching-title,
+#session-title {
+    padding: 40px 0;
+    font-family: var(--font-main-);
+    font-weight: 500;
+    font-size: clamp(1.3rem, 2.25vw, 2.25rem);
+}
+
+#coaching-para,
+#session-para {
+    font-family: var(--font-secondary-);
+    padding-bottom: 40px;
+    line-height: 1.8;
+    font-size: clamp(.9rem, 1.4vw, 1.1rem);
+}
+
+#coaching-col-2 {
+    width: 45vw;
+}
+
+#coaching-para,
+#coaching-img {
+    width: 30vw;
+}
+
+#session-para span {
+    border-bottom: 1.5px solid var(--clr-black-);
+}
+
+#coach-price {
+    width: 300px;
+    font-size: 1.1rem;
+}
+
+#consultation-btn {
+    width: 180px;
+    font-size: .9rem;
+}
+
+/* footer */
+footer {
+    background-color: #c2c8cc;
+    height: auto;
+    margin-top: 100px;
+}
+
+#ftr-title {
+    text-align: center;
+    font-family: var(--font-main-);
+    font-weight: 500;
+    padding: 40px 0;
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+#email {
+    border: none;
+    padding: 1.5rem 7rem 1.5rem 1.5rem;
+    position: relative;
+    left: -.5rem;
+}
+
+#email::placeholder {
+    color: rgb(184, 184, 184);
+    font-family: var(--font-secondary-);
+    font-size: 1rem;
+}
+
+#email:focus {
+    outline: 2px solid var(--clr-black-);
+    outline-offset: 5px;
+}
+
+#form-btn {
+    color: #c2c8cc;
+    background-color: var(--clr-black-);
+    font-family: var(--font-secondary-);
+    border: none;
+    padding: 1.35rem 1.75rem;
+    font-size: 1rem;
+}
+
+#form-btn:hover {
+    cursor: pointer;
+    background-color: rgb(43, 42, 42);
+}
+
+
+/* on scroll, page loads in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 350ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+
+/* mobiie media query*/
+@media (max-width: 800px) {
+    #desktop-nav {
+        display: none;
+    }
+    .mobile-hidden {
+        display: none;
+    }
+    #mobile-logo a {
+        color: var(--clr-white-);
+        text-decoration: none;
+    }
+    .section {
+        flex-direction: column;
+    }
+    #price-btn {
+        flex-direction: column;
+    }
+    #event-col-1 img {
+        display: block;
+        width: 84vw;
+        margin: 0 auto;
+    }
+
+    .section-para {
+        width: 84vw;
+        padding-bottom: 30px;
+    }
+
+    #event-col-2 {
+        width: 84vw;
+    }
+
+    .price-btn {
+        width: 84vw;
+        margin: 20px auto;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .price {
+        width: 50%;
+    }
+
+    #course-price {
+        left: 0;
+    }
+
+    .sign-up-btn {
+        margin: 30px 0 50px 0;
+
+    }
+
+    #detox-oils {
+        flex-direction: column;
+        width: 84vw;
+    }
+
+    #courses {
+        width: 84vw;
+        margin: 0 auto;
+    }
+
+    .text-img-flex img {
+        display: block;
+        width: 84vw; margin: 0 auto;
+    }
+
+    #course-col-1 p,
+    .text-img-flex h3,
+    .text-img-flex p,
+    .text-img-flex ul li {
+        width: 84vw;
+        margin: 0 auto;
+    }
+
+    .text-img-flex h3 {
+        margin: 30px 0;
+    }
+
+    #course-col-1 p {
+        margin-bottom: -30px;
+    }
+
+    #coaching {
+        flex-direction: column; 
+    }
+
+    #session-title {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: -70px;
+    }
+    #coaching-para,
+    #coaching-title {
+        width: 84vw;
+        margin: 0 auto;
+    }
+    #coaching-img {
+        display: block;
+        width: 84vw;
+        margin: 0 auto;
+    }
+
+    #session-para {
+        width: 89vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #coach-price {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+    #consultation-btn {
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
+    }
+
+    #form {
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    #form-btn {
+        margin-top: 30px;
+    }
+}
+
+/* desktop */
+@media (min-width: 800px) {
+    #mobile-nav {
+        display: none;
+    }
+    #hamburger {
+        display: none;
+    }
+}

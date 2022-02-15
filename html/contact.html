@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/contact.css" type="text/css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="https://kit.fontawesome.com/6b4e73a8c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+        <!-- desktop navbar -->
+        <nav id="desktop-nav">
+            <!-- social icons for desktop/tablet/ipad nav -->
+            <ul id="desktop-nav-socials" class="socials">
+                <li class="fade-in"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="fade-in"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="fade-in"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <!-- desktop nav links -->
+            <div id="desktop-logo-links">
+                <i id="desktop-logo" class="logo fade-in"><a href="./index.html">WELLNESS BY MYHRA</a></i>
+                <ul id="desktop-nav-links" class="nav-links">
+                    <li class="fade-in"><a href="./about.html">About</a></li>
+                    <li class="fade-in"><a href="./services.html">Services</a></li>
+                    <li class="fade-in"><a href="./coaching.html">Coaching</a></li>
+                    <li id="dropdown" class="fade-in"><a href="#">Recipes</a>
+                    <ul id="dropdown-content">
+                        <li><a href="#">Seasonal recipes</a></li>
+                        <li><a href="#">Meal plans</a></li>
+                    </ul></li>
+                    <li class="fade-in" id="fifth-child"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- desktop login link and nav button -->
+            <div class="desktop-nav-buttons">
+                <a href="#" id="desktop-login" class="fade-in">Login</a>
+            <button id="desktop-nav-btn" class="nav-btn btn fade-in"><a href="./work.html">Work with me</a></button>
+            </div>
+        </nav>
+
+        <!-- mobile navbar -->
+        <nav id="mobile-nav">
+            <div class="bg-cover"></div>
+            <div class="logoburger">
+                <!-- title/logo -->
+                <i id="mobile-logo" class="logo"><a href="./index.html">WELLNESS BY MYHRA</a></i>
+                <!-- hamburger -->
+                <button id="hamburger" class="toggle">
+                    <span class="line"></span>
+                </button>
+            </div>
+            <!-- nav links for mobile hamburger menu -->
+            <ul id="mobile-nav-links" class="nav-links mobile-hidden">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./coaching.html">Coaching</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <!-- mobile login link -->
+            <a href="#" id="mobile-login" class="mobile-hidden">Login</a>
+            <!-- mobile social media icons for hamburger menu -->
+            <ul id="mobile-nav-socials" class="socials mobile-hidden" >
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <!-- button in hamburger menu -->
+            <button id="mobile-nav-btn" class="nav-btn btn mobile-hidden"><a href="./work.html">Work with me</a></button>
+        </nav>
+    </header>
+
+    <main id="contact">
+        <div id="contact-info">
+            <h1 class="fade-in">CONTACT ME</h1>
+            <p class="fade-in">For inquires about event or press opportunities, please feel free to reach out here. If you’re interested in 1:1 coaching, you can go ahead and <span>schedule your free consultation</span> now.</p>
+        </div>
+        <div id="contact-form">
+            <form action="#">
+                <div class="name">
+                    <div id="first-name">
+                        <label for="name" id="name-title">Name *</label>
+                        <input type="name" id="name">
+                        <label for="name">First Name</label>
+                    </div>
+                    <div id="last-name">
+                        <input type="name" id="name">
+                        <label for="name">Last Name</label>
+                    </div>
+                </div>
+                <div class="contact-email">
+                    <label for="contact-email">Email *</label>
+                    <input type="email" id="contact-email">
+                </div>
+                <div class="subject">
+                    <label for="subject">Subject *</label>
+                    <input type="subject" id="subject">
+                </div>
+                <div class="message">
+                    <label for="text">Message *</label>
+                    <textarea name="text" id="text"></textarea>
+                </div>
+                <div id="checkbox">
+                    <h4 id="checkbox-title">Inquiring about</h4>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="services" value="services">
+                        <label for="services">Services</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="corporate-events" value="corporate-events">
+                        <label for="corporate-events">Corporate events</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="group-events" value="group-events">
+                        <label for="group-events">Group events</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="press-opportunity" value="press-opportunity">
+                        <label for="press-opportunity">Press opportunity</label>
+                    </div>
+                </div>
+                <div id="contact-submit">
+                    <button id="contact-submit-btn" class="fade-in">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <h3 id="ftr-title" class="fade-in">NEVER MISS A RECIPE.</h3>
+        <form action="#" id="form">
+            <input type="email" id="email" placeholder="Email Address" class="fade-in">
+            <button id="form-btn" class="fade-in">Sign Up</button>
+        </form>
+    </footer>
+
+    <script src="/javascript/contact.js"></script>
+</body>
+</html>
