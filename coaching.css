@@ -538,6 +538,14 @@ footer {
 
 
 /* mobiie */
+
+@media (max-width: 500px) {
+
+    #session-info-title {
+        font-size: 1.8rem;
+    }
+}
+
 @media (max-width: 800px) {
     #desktop-nav {
         display: none;

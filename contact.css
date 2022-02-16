@@ -321,6 +321,8 @@ body {
 #name {
     padding: .75rem 10px;
     margin: 10px 0;
+    outline: none;
+    border: none;
 }
 
 #name-title {
